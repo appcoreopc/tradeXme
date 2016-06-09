@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
 
- def index
+def index
+  render 'home/index'
+end
+
+ def users
    @users = User.all
    render json: @users
  end
