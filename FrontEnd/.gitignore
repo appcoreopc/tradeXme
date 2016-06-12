@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+typings/
+node_modules/
+*.js
+*.js.map
