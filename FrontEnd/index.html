@@ -1,40 +1,73 @@
 <html>
-  <head>
-    <base href="/">
-    <title>Simple timesheet App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <link rel="stylesheet" href="styles.css">
-    <!-- 1. Load libraries -->
-    <!-- IE required polyfills, in this exact order -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
-    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
-    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
-    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
-    <script src="node_modules/angular2/bundles/router.dev.js"></script>
-    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+<head>
+  <base href="/">
+  <title>Simple timesheet App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <!-- 1. Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+  <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+  <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+  <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="node_modules/rxjs/bundles/Rx.js"></script>
+  <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+  <script src="node_modules/angular2/bundles/http.dev.js"></script>
 
-    <!-- 2. Configure SystemJS -->
-    <script>
-      System.config({
-        packages: {        
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        }
-      });
-      System.import('app/main')
-            .then(null, console.error.bind(console));
+  <!-- 2. Configure SystemJS -->
+  <script>
+  System.config({
+    packages: {
+      app: {
+        format: 'register',
+        defaultExtension: 'js'
+      }
+    }
+  });
+  System.import('app/main')
+  .then(null, console.error.bind(console));
 
-    </script>
+  </script>
   </head>
   <!-- 3. Display the application -->
+
+
+  <header class="new-header"><div class="container"><div class="row clearfix"><a href="/" class="tpv2-branding">Tradingpost.com.au</a><div class="head-right"><div class="user-navi"><ul class="user-navi-list"><li><a href="#sign-in">Sign in</a></li><li><a href="#register">Join</a></li><li class="dropdown" style="border-right: 1px solid rgba(0,0,0,.1);padding-right: 20px;"><a href="/my-account/my-ads" class="dropdown-toggle" aria-haspopup="true" aria-expanded="true" onclick="window.location='/my-account/my-ads'; return false;">
+  My Tradingpost
+  <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/recently-viewed-page"><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span>
+  Recently Viewed
+  </a></li><li><a href="/my-account/my-ads"><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span>
+  My Ads
+  </a></li><li><a href="/my-account/my-saved-searches"><span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+  My Saved Searches
+  </a></li><li><a href="/my-account/my-watch-list"><span aria-hidden="true" class="materialicon material-favorite"></span>
+  My Watchlist
+  </a></li><li><a href="/my-account/my-messages"><span aria-hidden="true" class="glyphicon glyphicon-comment"></span>
+  My Messages
+  </a></li><li><a href="/my-account"><span aria-hidden="true" class="glyphicon glyphicon-user"></span>
+  My Profile
+  </a></li></ul></li><li><a href="/help/">Help</a></li></ul></div><div class="" style="float:right;margin:0px; height: 90px;"><div id="div-gpt-ad-1455507407909-12" style="height:90px; width:728px;"><script type="text/javascript">
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1455507407909-12'); });
+  </script><div id="google_ads_iframe_/35039992/AU_TP_DT_HP_LB1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/35039992/AU_TP_DT_HP_LB1_0" title="3rd party ad content" name="google_ads_iframe_/35039992/AU_TP_DT_HP_LB1_0" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/35039992/AU_TP_DT_HP_LB1_0__hidden__" title="" name="google_ads_iframe_/35039992/AU_TP_DT_HP_LB1_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div></div></div></div></div></header>
+
+
+  <!-- header categories -->
+
+  <section class="cat-dark-bar"><div class="container"><div class="row clearfix top-rel"><ul class="cat-top-list"><li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true" style="color:#ffffff;"></span></a>&nbsp;&nbsp;
+            </li><li><a href="/Automotive/Browse">Cars</a></li><li><a href="/4X4/Browse">4x4s</a></li><li><a href="/Automotive/Motorbikes-ATVs/Browse">Motorbikes</a></li><li><a href="/Automotive/Caravans/Browse">Caravans</a></li><li><a href="/Automotive/Trailers/Browse">Trailers</a></li><li><a href="/Boats/Browse">Boats</a></li><li><a href="/Pets-Horses/Browse">Pets</a></li><li><a href="/Garden-Outdoor-Living/Browse">Backyard</a></li><li><a href="/DIY-Home-Renovations/Browse">Home &amp; DIY</a></li><li><a href="/Rural-Machinery/Browse">Farm</a></li><li><a href="/Sport-Leisure-Travel/Browse">Sport &amp; Fun</a></li><li><a href="/Automotive/Wheels-Tyres-Parts-Accessories/Browse">Wheels &amp; Parts</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="true" onclick="return false;">
+                More <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="/Arts-and-Crafts/Browse">Arts &amp; Crafts</a></li><li><a href="/Books-and-Publications/Browse">Books</a></li><li><a href="/Business-Office/Browse">Commercial</a></li><li><a href="/Computers/Browse">Computers</a></li><li><a href="/Electronics/Browse">Electronics &amp; Cameras</a></li><li><a href="/Family-Baby/Browse">Family &amp; Baby</a></li><li><a href="/Fashion-and-Beauty/Browse">Fashion &amp; Beauty</a></li><li><a href="/Music-and-Video/Browse">Music &amp; Movies</a></li><li><a href="/Musical-Instruments/Browse">Musical Instruments</a></li><li><a href="/Noticeboard/Browse">Noticeboard</a></li><li><a href="/Electronics/Telephones-and-VOIP/Browse">Phones</a></li><li><a href="/Real-Estate/Browse">Real Estate</a></li><li><a href="/Toys-Games/Browse">Toys &amp; Games</a></li><li><a href="/Buy">View all departments</a></li></ul></li></ul><a href="/listings/create" class="post-ad-top btn btn-primary">Post a Free Ad Now!</a></div></div></section>
+
+
+
   <body>
-
-    <my-app>Loading...</my-app>
-
+  <my-app>Loading...</my-app>
   </body>
-</html>
+
+
+  <div class="row copyrightstate text-center"><a href="/help/contact-us/">Contact Us</a> |
+            <span style="color:#f08525;">© Copyright <a href="/">Tradingpost.com Pte Ltd</a> 2015</span> | <a href="/help/terms-conditions/terms-of-use/"> Terms of Use</a> | <a href="/help/privacy-policy/">Privacy Policy</a></div>
+
+
+  </html>
