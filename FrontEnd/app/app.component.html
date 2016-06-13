@@ -1,6 +1,15 @@
-<h1>Simple Timesheet App</h1>
+
+<trademeHeader [selectedEmployee]="selectedEmployee" (onTimesheetSaved)="handleTimeSheetChanged($event)"></trademeHeader>
+
+<!-- 3. Display the application -->
+<!-- header categories -->
+
+<trademeCategoryBarComponent>
+</trademeCategoryBarComponent>
+
+<h1>trademe X</h1>
 <div>List of employees in the system </div>
-<div> 
+<div>
  <li *ngFor="#employee of employees" (click)="addTimeSheet(employee)">
  	<span>	{{ employee.id }} </span>
 	<span>	{{ employee.name }} </span>
@@ -10,9 +19,12 @@
 <div>Employee timesheet Entry</div>
 
 <div *ngIf="timesheetEntered">
-	You already entered timesheet for : {{selectedEmployee.name}}. Please change and press "Save"" if you would like to change. 
+	You already entered timesheet for : {{selectedEmployee.name}}. Please change and press "Save"" if you would like to change.
 </div>
 
 <div>
 	<timesheetEntry [selectedEmployee]="selectedEmployee" (onTimesheetSaved)="handleTimeSheetChanged($event)"></timesheetEntry>
  </div>
+
+<trademeFooterComponent>
+</trademeFooterComponent>

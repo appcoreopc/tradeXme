@@ -4,17 +4,20 @@ import { Employee } from 'app/Employees';
 import { Timesheet } from 'app/timesheet';
 
 @Component({
-    selector: 'timesheetEntry',
-    templateUrl : 'app/timesheetEntry.html',
+    selector: 'trademeFooterComponent',
+    templateUrl : 'app/trademeFooterComponent.html',
 })
 
-export class TimeSheetEntryComponent
+export class TrademeFooterComponent
 {
     @Input() selectedEmployee: Employee;
+
     @Input() timesheetExist: boolean;
+
     @Output() onTimesheetSaved = new EventEmitter<Timesheet>();
 
     currentTimesheet : Timesheet = new Timesheet();
+
     previousEmployeeId: number = -1;
 
     ngOnInit()
