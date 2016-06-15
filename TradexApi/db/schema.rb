@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608100800) do
+ActiveRecord::Schema.define(version: 20160615152124) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "address1"
@@ -22,6 +22,34 @@ ActiveRecord::Schema.define(version: 20160608100800) do
     t.string   "addressType"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "datePosted"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "product_id"
+    t.string   "user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "imagePath"
+    t.string   "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "category_id"
+    t.string   "user_id"
   end
 
   create_table "users", force: :cascade do |t|
